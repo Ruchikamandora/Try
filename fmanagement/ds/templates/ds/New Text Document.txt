@@ -1,0 +1,6 @@
+<html>
+<head> Binary Search Result</head>
+<body>
+{{num1}} {{num2}} {{num3}} {{num4}} {{num5}} {{num6}}
+</body>
+</html>

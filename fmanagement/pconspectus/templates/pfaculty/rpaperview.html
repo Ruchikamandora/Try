@@ -1,0 +1,24 @@
+<html>
+<head> 
+ </head>
+<body>  
+
+<br> Title: {{book.title}}
+<br> Abstract: {{book.abstract}}
+<br> Year of Publication: {{ book.publication_year }}
+<br> Location: {{ book.location }}
+<br> State: {{ book.state }}
+<br> First Author Name: {{book.title_first}} {{book.first_author_fname}}  {{book.first_author_lname}}
+{% if book.second_author_fname != "" %}
+<br> Second Author Name: {{book.title_second}} {{book.second_author_fname}}  {{book.second_author_lname}}
+{% endif %}
+{% if book.third_author_fname != "" %}
+<br> Third Author Name: {{book.title_third}} {{book.third_author_fname}}  {{book.third_author_lname}}
+{% endif %}
+<br> Citation : <u> {{book.citation}} </u>
+<br> Click Image to Download pdf File :  <a href="{{book.file.url}}">
+{% load staticfiles %}
+<img src="{% static "images/pdf.png" %}" alt="PDF" height="100" width="100" />
+</a>
+</body>
+</html>

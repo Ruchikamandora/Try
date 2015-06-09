@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <title>publication website</title>
+    <link rel="stylesheet" type="text/css" href="{% static "bootstrap/dist/css/bootstrap.min.css" %}" />
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+    <link rel="stylesheet" href= "{% static "css/uploadc.css" %}" >
+</head>
+<body>
+    <header class="head1">
+   	    <h1 class="text-center" ><strong><span style="color:silver" class="textdecor">Publication Conspectus</span></strong></h1>
+   	</header>
+   	</br>
+   	<div class="jumbotron container jumbotronb">
+   	   <div class="jumbo">
+   		<h4 class="">Book:</h4>
+{% if key == "" %}
+You haven't entered any year! <a href="/tlogin/advancedsearch/"> Please Re-enter! </a>
+{% else %}
+Book:
+
+{% for book in book %}
+{% with year=book.publication_year %}
+{% if key == year %}
+{% with title=book.title %}
+<br><a href = "/plogin/{{title}}/"> Title :  {{ title }} </a>
+<br> Abstract : {{ book.abstract|truncatechars:70 }}
+{% endwith %}
+{% endif %}
+{% endwith %}
+{% endfor %}
+   	   </div>
+   	</div>
+   	<div class="jumbotron container jumbotronb">
+   	    <div class="jumbo">
+   		<h4 class="">Book Chapter:</h4>
+   	
+<br>
+
+Book Chapter:
+<br>
+{% for bookchapter in bookchapter %}
+{% with year=bookchapter.publication_year %}
+{% if key == year %}
+{% with title=bookchapter.title %}
+<br><a href = "/plogin/{{title}}/"> Title :  {{ title }} </a>
+<br> Abstract : {{ bookchapter.abstract|truncatechars:70 }}
+{% endwith %}
+{% endif %}
+{% endwith %}
+{% endfor %}
+<br>
+<br>
+   	   </div>
+   	</div>
+   	<div class="jumbotron container jumbotronb">
+   		<div class="jumbo">
+   		<h4 class="">Research Paper:</h4>
+   		<br>
+Research Paper:
+<br>
+{% for rpaper in rpaper %}
+{% with year=rpaper.publication_year %}
+{% if key == year %}
+{% with title=rpaper.title %}
+<br><a href = "/plogin/{{title}}/"> Title :  {{ title }} </a>
+<br> Abstract : {{ rpaper.abstract|truncatechars:70 }}
+{% endwith %}
+{% endif %}
+{% endwith %}
+{% endfor %}
+<br>
+<br>
+   	   </div>
+   	</div>
+   	<div class="jumbotron container jumbotronb">
+   		<div class="jumbo">
+   		<h4 class="">Conference Paper:</h4>
+   	<br>
+
+Conference Paper:
+<br>
+{% for cpaper in cpaper %}
+{% with year=cpaper.publication_year %}
+{% if key == year %}
+{% with title=cpaper.title %}
+<br><a href = "/plogin/{{title}}/"> Title :  {{ title }} </a>
+<br> Abstract : {{ cpaper.abstract|truncatechars:70 }}
+{% endwith %}
+{% endif %}
+{% endwith %}
+{% endfor %}
+
+{% endif %}
+   	   </div>
+   	</div>
+    <script src="{% static "bootstrap/dist/js/bootstrap.min.js" %}" ></script>  
+</body>
+<footer><p class="text-left"><font size="3px" >To go back to the previose pagenew click <span class="label label-primary" ><a href="facultyprofile.html"> Here </a></span></font></p></footer>
+</html>

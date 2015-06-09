@@ -1,0 +1,27 @@
+<html>
+<head> 
+ </head>
+<body>  
+
+<div>
+<br>Abstrat : {{form.abstract}}
+<br> Publication Year: {{form.publication_year}}                                       
+<br> Location : {{form.location}} 
+<br> First Author Name : {{form.title_first}} {{form.first_author_fname}} {{form.first_author_middlename}} {{form.first_author_lname}}
+{% if form.second_author_fname != "" %}           
+<p>Second Author Name : {{form.title_second}} {{form.second_author_fname}} {{form.second_author_middlename}} {{form.second_author_lname}}
+</p>      
+{% endif %}  
+
+{% if form.third_author_fname != "" %}           
+<p>Third Author Name : {{form.title_third}} {{form.third_author_fname}} {{form.third_author_middlename}} {{form.third_author_lname}}
+</p>       
+{% endif %}  
+
+{% if form.file %}           
+<p><img src="{{form.file.url}}" width="800" ></img>
+</p>       
+{% endif %}  
+<br> Citation : {{form.citation}}  
+</body>
+</html>

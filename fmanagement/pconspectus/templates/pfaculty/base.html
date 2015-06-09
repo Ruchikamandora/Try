@@ -1,0 +1,112 @@
+<html>
+<head><title>facultyinfo</title>
+          
+<style>
+#mainlist{
+      margin: 0px;
+      padding:50px;
+      font-family:arial;
+      font-size: 20px; 
+} 
+
+#mainlist:hover{
+                           background-color:#ff8080;
+                           opacity:1;
+                           
+}
+
+#mainlist, 
+#mainlist ul{
+                         list-style: none;
+                         text-color:blue;
+                         background-color:#ff8080; 
+                         opacity:0.8;
+                   }
+#mainlist>li{
+                         float:left;
+                         
+                    }
+#mainlist li a{
+                        display: block;
+                        height:20px
+                        width:600px;
+                        padding:10px;
+                        text-decoration: none;
+                        background-color:;
+                        color:white;
+                    
+                     }
+#facultyInfoLink{
+                           position: absolute;
+                           background-color: blue;
+                           z-index:9999;
+                           display: none;
+                         }
+#facultyInfoLink>li>a{ 
+                                color:#white;
+                                width: auto;
+                         }
+#mainlist li a:hover{
+                                 background-color: #5884d6;
+                                 color: #fff;
+                                 font-size:25px;
+                               }
+#mainlist li:hover #facultyInfoLink{
+                                                                display:bock;
+                                                         }
+h1{
+       float:right;
+       color:green;
+}
+
+#form1{
+                 margin:0px;
+                 padding:25px;
+                 float:right;
+                 color:green;
+                 font-size:20px;
+                 
+}
+
+#head1{
+               font-size:40px;
+               color:red;
+               padding:10px;
+               text-align:left;
+    
+}
+#head1:hover{
+
+}
+
+</style>
+
+</head>
+<body>
+         <header id="head1">Publication Conspectus
+        </header>
+           <ul id ="mainlist">
+                  <li><a href="/pfaculty/base.html">Home</a></li>
+
+                  <li><a href="#">login</a></li>
+
+                  <li><a href="#">Faculty Information</a>
+	           <ul id="facultyInfoLink">
+                           <li><a href="%">General Info</a></li>
+	           <li><a href="%">Reasearch Paper</a></li>
+                           <li><a href="%">Achivements</a></li>
+                           </ul>
+                 </li>
+
+                  <li><a href="#">IIPS Faculties</a></li>
+                  
+         </ul>
+          
+    <div>
+ {% block content %} 
+ {% endblock %}
+</div>
+         
+</body>
+
+</html>

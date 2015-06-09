@@ -1,0 +1,10 @@
+<html><head>
+Change Password</head>
+<body>
+<form method="post" action="/login/passwordchanged/" > {% csrf_token %}
+Enter new username: <input type="text" name="username" /><br>
+Enter new password : <input type="password" name="password" /><br>
+<input type = "submit" value = "change" />
+</form>
+</body>
+</html>

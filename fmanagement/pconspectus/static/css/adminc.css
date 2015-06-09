@@ -1,0 +1,45 @@
+.head1{
+    text-shadow:green 0 -2px;
+    height: 40px;
+}
+.textdecor{
+              text-shadow:green 0 -2px;
+}
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;  
+   bottom: 5px;  
+}
+button{
+	background-color: black;
+	opacity: 0.8;
+	color: white;
+}
+
+button:hover
+{
+	
+	opacity: 0.9;
+}
+.align1{
+	left: 300px;
+
+}
+.jumbo{
+
+     height: 150px;
+     width: 75px;
+     background-color: green;
+     right: 10px;
+     top:100px;
+     position: relative;
+}
+
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }

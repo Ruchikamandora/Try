@@ -1,0 +1,84 @@
+.head1{
+    text-shadow:green 0 -2px;
+    height: 80px;
+    background-color: black;
+    top:0px;
+    padding: 10px;
+    bottom: 5px;
+
+}
+.textdecor{
+           text-shadow:green 0 -2px;
+}
+.tab-colors
+{
+	background-color: black;
+	color:navy !important;
+	opacity: 1;
+}
+.container_jumbos{
+	
+}
+.border1{
+	height: 100%;
+}
+
+li:hover{
+    background-color: black;
+	color:white !important;
+	opacity: 1;
+}
+img{
+	border-radius:0px;
+	
+}
+ul{
+	border-right: 1px;
+	border-left: 1px;
+	border-style: solid;
+	border-bottom: 1px;
+	border-top: 1px;
+	border-spacing: 0px;
+	border-color: navy;
+	top: 41px;
+	padding: 0px;
+}
+.head2{
+	background-color: black;
+	color: white;
+	border-style: 2px solid navy;
+    word-spacing: nowrap;
+    height: 80px;
+    text-align: center;
+    opacity: 0.7;
+}
+footer{
+	background-color: #fdfdfd;
+    position: fixed;
+
+}
+#BookDiv{
+	width: 60%;
+}
+.border1{
+          border-style: 3px solid;
+          border-color: white;
+
+}
+.jumbotronb{
+	top: 10px;
+	left: 10px;
+	margin-left: 10px;
+	-moz-box-shadow: 2px 2px 2px 2px blue;
+    -webkit-box-shadow: 2px 2px 2px 2px blue;
+    box-shadow: 2px 2px 2px  2px blue;
+    
+}
+
+.jumbos{
+
+	padding: 50px;
+	top:50px;
+	left:200px;
+}
+

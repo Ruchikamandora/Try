@@ -1,0 +1,31 @@
+.head1{
+    text-shadow:green 0 -2px;
+    height: 80px;
+    background-color: black;
+    top:0px;
+}
+.textdecor{
+           text-shadow:green 0 -2px;
+}
+.jumbo{
+  padding: 10px;
+  top:0px;
+  left:5px;
+  color: navy;
+}
+.jumbotronb{
+	-moz-box-shadow: 2px 2px 2px 2px navy;
+    -webkit-box-shadow: 2px 2px 2px 2px navy;
+    box-shadow: 2px 2px 2px  2px navy;
+
+}
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;  
+   bottom: 5px;  
+   position: relative;
+   color: white;
+}

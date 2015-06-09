@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <title>publication website</title>
+    <link rel="stylesheet" type="text/css" href="{% static "bootstrap/dist/css/bootstrap.min.css" %}" />
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+    <link rel="stylesheet" href= "{% static "css/uploadc.css" %}" >
+</head>
+<body>
+    <header class="head1">
+   	    <h1 class="text-center" ><strong><span style="color:silver" class="textdecor">Publication Conspectus</span></strong></h1>
+   	</header>
+   	</br>
+   	<div class="jumbotron container jumbotronb">
+   	   <div class="jumbo">
+ 
+ <h4 class="">Book:</h4>  		
+{% if data1.title != "" %}
+<ul>
+{% for data1 in data1 %}
+{% with title=data1.title %}
+<br><a href = "/plogin/{{title}}/"> Title :  {{ data1.title }} </a>
+<br> Abstract : {{ data1.abstract|truncatechars:70 }}
+{% endwith %}
+{% endfor %}
+</ul>
+{% endif %}
+
+{% if data2.title != "" %}
+<ul>
+    {% for data2 in data2 %}
+    {% with title=data2.title %}
+    <br><a href = "/plogin/{{title}}/">Title :  {{ data2.title }}   </a>
+    <br> Abstract : {{ data2.abstract }}
+    {% endwith %}
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% if data3.title != "" %}
+<ul>
+{% for data3 in data3 %}
+{% with title=data3.title %}
+<br><a href = "/plogin/{{title}}/"> Title :  {{ data3.title }}  </a>
+<br> Abstract : {{ data3.abstract}}
+{% endwith %}
+{% endfor %}
+</ul>
+{% endif %}
+
+
+   	   </div>
+   	</div>
+   	<div class="jumbotron container jumbotronb">
+   	    <div class="jumbo">
+   		<h4 class="">Book Chapter:</h4>
+   	
+<br>
+
+Book Chapter:
+{% for data4 in data4 %}
+{% with title=data4.title_chapter %}
+<br><a href = "/plogin/{{title}}/">Title of Chapert in Book :  {{ data4.title_chapter }}  </a>
+<br> Abstract : {{ data4.abstract}}
+{% endwith %}
+{% endfor %}
+</ul>
+{% endif %}
+
+{% if data5.title != "" %}
+<ul>
+{% for data5 in data5 %}
+{% with title=data5.title_chapter %}
+<br><a href = "/plogin/{{title}}/">Title of Chapert in Book :  {{ data5.title_chapter }} </a>
+<br> Abstract : {{ data5.abstract }}
+{% endwith %}
+{% endfor %}
+</ul>
+{% endif %}
+
+
+{% if data6.title != "" %}
+<ul>
+{% for data6 in data6 %}
+{% with title=data6.title_chapter %}
+<br><a href = "/plogin/{{title}}/">Title of Chapter in Book :  {{ data6.title_chapter }} </a>
+<br> Abstract : {{ data6.abstract }}
+{% endwith %}
+{% endfor %}
+</ul> 
+{% endif %}
+
+<br>
+   	   </div>
+   	</div>
+   	<div class="jumbotron container jumbotronb">
+   		<div class="jumbo">
+   		<h4 class="">Research Paper:</h4>
+   		<br>
+
+{% if data7.title != "" %}
+<ul>
+Research Paper:
+{% for data7 in data7 %}
+{% with title=data7.title %}
+<br><a href = "/plogin/{{title}}/"> Title of Research Paper :  {{ data7.title }} </a>
+<br> Abstract : {{ data7.abstract }}
+{% endwith %}
+{% endfor %}
+</ul>
+{% endif %}
+
+
+
+{% if data8.title != "" %}
+<ul>
+{% for data8 in data8 %}
+{% with title=data8.title %}
+<br><a href = "/plogin/{{title}}/">Title of Research Paper :  {{ data8.title }}   </a>
+<br> Abstract : {{ data8.abstract }}
+{% endwith %}
+{% endfor %}
+</ul>
+{% endif %}
+
+
+{% if data9.title != "" %}
+<ul>
+{% for data9 in data9 %}
+{% with title=data9.title %}
+<br><a href = "/plogin/{{title}}/"> Title of Research Paper:  {{ data9.title }}  </a>
+<br> Abstract : {{ data9.abstract }}
+{% endwith %}
+{% endfor %}
+</ul>
+{% endif %}
+
+   	   </div>
+   	</div>
+   	<div class="jumbotron container jumbotronb">
+   		<div class="jumbo">
+   		<h4 class="">Conference Paper:</h4>
+   	<br>
+
+Conference Paper:
+<br>
+{% if data10.title != "" %}
+<ul>
+Conference Paper:
+{% for data10 in data10 %}
+{% with title=data10.title_paper %}
+<br><a href = "/plogin/{{title}}/">Title of Conference Paper:  {{ data10.title_paper }}  </a>
+<br> Abstract : {{ data10.abstract }}
+{% endwith %}
+{% endfor %}
+</ul>
+{% endif %}
+
+
+
+{% if data11.title != "" %}
+<ul>
+{% for data11 in data11 %}
+{% with title=data11.title_paper %}
+<br><a href = "/plogin/{{title}}/">Title of Conference Paper :  {{ data11.title_paper }} </a>
+<br> Abstract : {{ data11.abstract }}
+{% endwith %}
+{% endfor %}
+</ul>
+{% endif %}
+
+{% if data12.title != "" %}
+<ul>
+{% for data12 in data12 %}
+{% with title=data12.title_paper %}
+<br><a href = "/plogin/{{title}}/">Title of Conference Paper :  {{ data12.title_paper }} </a>
+<br> Abstract : {{ data12.abstract }}
+{% endwith %}
+{% endfor %}
+{% endif %}
+</ul>
+
+   	   </div>
+   	</div>
+    <script src="{% static "bootstrap/dist/js/bootstrap.min.js" %}" ></script>  
+</body>
+<footer><p class="text-left"><font size="3px" >To go back to the previose pagenew click <span class="label label-primary" ><a href="facultyprofile.html"> Here </a></span></font></p></footer>
+</html>

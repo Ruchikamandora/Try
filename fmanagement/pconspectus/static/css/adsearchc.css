@@ -1,0 +1,28 @@
+.head1{
+    text-shadow:green 0 -2px;
+    height: 40px;
+}
+.textdecor{
+              text-shadow:green 0 -2px;
+}
+.form1{
+height: 0px;
+width: 0px;
+margin: 10px;
+padding: 20px;
+color: blue;
+}
+.rightalign
+{
+	padding-left: 20px;
+	border-left: 1px solid black;
+	height: 100%;
+}
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;  
+   bottom: 5px;  
+}

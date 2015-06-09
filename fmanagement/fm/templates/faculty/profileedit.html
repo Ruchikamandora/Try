@@ -1,0 +1,16 @@
+<html>
+<Title>Profile Editing</Title>
+<body>
+<form method ="post" action="/faculty/saveprofile/" >{% csrf_token %}
+<br>Name : {{fullname}}
+<br>Contact Number : <input type="text" name="contactno" />
+<br>Academic Qualifications : <textarea rows="5" cols="50" name="acedemic_qualifications">
+Enter Your Academic Qualifications here... </textarea>
+<br>Experience : <textarea rows="5" cols="50" name="experience">
+Enter Your Experience here... </textarea>
+<br>Subject Profeciencies : <textarea rows="5" cols="50" name="subject_profeciencies">
+Enter Your Subject Profeciencies here... </textarea>
+<br><input type = "submit" value = "save" />
+</form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="post" action="/tlogin/save/" > {% csrf_token %}
+Username: <input type="text" name="username" /><br>
+Password : <input type="password" name="password" /><br>
+<input type = "submit" value = "Login"/>
+</form>
+<p>
+Registered Faculties:
+<br> {% with name="Ruchika Mandora" %}
+<a href = "/tlogin/name/{{name}}/"> {{name}} </a>
+{% endwith %}
+
+{% with name="Shreya Jayaswal" %}
+<br> <a href = "/tlogin/name/{{name}}/"> {{name}} </a>
+{% endwith %}
+</p>
+
+<form method="post" action="/tlogin/search/" > {% csrf_token %}
+Search By Title: <input type="text" name="search" /> <input type = "submit" value = "Go"/>
+</form>
+<a href = "/tlogin/advancedsearch/"> Click Here For Advanced Seach Facilities!</a>
+{% endblock %}

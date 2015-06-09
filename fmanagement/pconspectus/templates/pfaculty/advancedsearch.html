@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <title>publication website</title>
+    <link rel="stylesheet" type="text/css" href="{% static "bootstrap/dist/css/bootstrap.min.css" %}" />
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+    <link rel="stylesheet" href= "{% static "css/adsearchc.css" %}" >
+
+</head>
+<body>
+
+        <header class="head1">
+      	 
+         <h1 class="text-left" ><strong><span style="color:black">Publication Conspectus</span></strong></h1>
+      	 
+         </header>
+
+       <nav class="navbar navbar-inverse">
+ 
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">PUBLICATION CONSPECTUS</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/tlogin/">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="/tlogin/userlogin/">User Login</a></li>
+        <li><a href="">Search by title <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a></li>
+
+      </ul>
+      <form class="navbar-form navbar-left" role="search" method="post" action="/tlogin/search/">
+        <div class="form-group">
+          <input type="text" class="form-control" name="search" placeholder="Search" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href = "/tlogin/advancedsearch/">Adwanced Search</a></li>
+        <li><a href="/tlogin/developer/">About Developers</a></li>
+        <li><a href="adminlogin.html">Admin Login</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+             
+</nav>
+      <div class="container">
+      <div class="row">
+      <form role="search" class="" method="post" action="/tlogin/advanceysearch/">
+        <label><b>Search by resaerch Year : </b></label>
+        <div class="form-group input-group" >
+          <input type="text"  class="form-control" name="yearsearch" placeholder="Search" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form></br>
+      <form role="search form1" method="post" action="/tlogin/advanceasearch/">
+        <label><b>Search by Author name : </b></label>
+        <div class="form-group input-group">
+          <input type="text" class="form-control" name="authorsearch" placeholder="Search" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form></br>
+      <form role="search form1" method="post" action="/tlogin/search/">
+        <label><b>Search by topic : </b></label>
+        <div class="form-group input-group">
+          <input type="text" class="form-control" name="search" placeholder="Search" required >
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form></br>
+      </div>
+      </div>
+      <div class="rightalign"></div>
+<script src="{% static "bootstrap/dist/js/bootstrap.min.js" %}" ></script> 
+</body>
+<footer><h3 class="text-left">Notice & Assesment</h4><p class="text-left"><font size="3px">TO visit new topics of research area and the content click <span class="label label-primary">Here</span></font></p></footer>
+
+</html>

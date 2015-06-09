@@ -1,0 +1,66 @@
+<html>
+
+<head>
+<style>
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:200px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+</style>
+</head>
+
+<body>
+
+<div id="header">
+<h1>Publication Management System</h1>
+</div>
+
+<div id="nav">
+<form method="post" action="/login/save/" > {% csrf_token %}
+Username: <input type="text" name="username" /><br>
+Password : <input type="password" name="password" />
+<input type = "submit" value = "Login"/>
+</form>
+</div>
+
+<div id="section">
+<h2>Welcome!</h2>
+<p>
+This is publication management system to facilitate faculties of the institute with an automated system having functionality to utilize their research records in institute level.
+</p>
+
+</div>
+
+<div id="footer">
+CopyRight@ Ruchika Mandora
+</div>
+
+<script>
+function myFunction() {
+    alert("Hello! I am an alert box!");
+}
+</script>
+</body>
+</html>

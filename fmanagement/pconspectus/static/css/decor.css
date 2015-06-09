@@ -1,0 +1,51 @@
+.head1{
+    text-shadow:green 0 -2px;
+    
+    height: 40px;
+}
+.textdecor{
+              text-shadow:green 0 -2px;
+}
+
+img{
+    padding: 10px;
+    margin: 10px;
+    border-spacing: 10 px;
+	border-image:url(border.png) 30 30 round;
+}
+
+.grow{
+       transition:all .2s ease-in-out;
+       border: 5px solid black;
+}
+
+.grow:hover{
+	         transform:scale(1.1); 
+}   
+
+
+
+.ruchika{
+  left: 10px;
+  right: 1000px;
+  position:relative;
+}
+.text1{
+        left: 200px;
+        top:300px;
+}
+
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;  
+   bottom: 5px;  
+}
+
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }

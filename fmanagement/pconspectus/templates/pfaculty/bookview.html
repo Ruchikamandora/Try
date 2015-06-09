@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head> 
+   <title> Publication </title>
+     <link rel="stylesheet" type="text/css" href="{% static "bootstrap/dist/css/bootstrap.min.css" %}" />
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+    <link rel="stylesheet" href= "{% static "css/uploadc.css" %}" >
+ </head>
+<body>  
+
+  <header class="head1">
+   	    <h1 class="text-center" ><strong><span style="color:silver" class="textdecor">Publication Conspectus</span></strong></h1>
+   	</header>
+   	</br>
+   	<div class="jumbotron container jumbotronb" >
+   	   <div class="jumbo">
+   		<h4 class="">Uploaded research</h4>
+      
+<br> <b> Title: </b> {{book.title}}
+<br> <b>  Abstract: </b> {{book.abstract}}
+<br> <b> Year of Publication: </b> {{ book.publication_year }}
+<br> <b> First Author Name: </b> {{book.title_first}} {{book.first_author_fname}}  {{book.first_author_lname}}
+{% if book.second_author_fname != "" %}
+<br> <b> Second Author Name: </b> {{book.title_second}} {{book.second_author_fname}}  {{book.second_author_lname}}
+{% endif %}
+{% if book.third_author_fname != "" %}
+<br> <b> Third Author Name: </b> {{book.title_third}} {{book.third_author_fname}}  {{book.third_author_lname}}
+{% endif %}
+<br> <b> Citation : </b> <u> {{book.citation}} </u>
+<br> <b>Click Image to Download pdf File :</b>  <a href="{{book.file.url}}">
+
+<img src="{% static "images/pdf.png" %}" alt="PDF" height="100" width="100" />
+</a>
+</div>
+   	</div>
+<script src="{% static "bootstrap/dist/js/bootstrap.min.js" %}" ></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head> <title>Upload Book Details</title>
+<script >
+function myFunction() {
+    document.getElementById('fDiv').style.display = 'none';
+    document.getElementById("sDiv").style.display = 'none';
+}
+
+function fdisplayFunction() {
+    document.getElementById("fDiv").style.display = 'block';
+}
+
+function sdisplayFunction() {
+    document.getElementById("sDiv").style.display = 'block';
+}
+
+</script>
+
+</head>
+<body onload="myFunction()">
+
+Dear {{fullname}}, Please Enter Followinng Details:<br>
+<form action="/pfaculty/bookchaptersave/" method= "post" enctype="multipart/form-data" > 
+<ul>
+<br>Title of Book : {{form.title_book}}
+<br>Title of Chapter in Book : {{form.title_chapter}}
+<br>Abstract : {{form.abstract}}
+<br>Publication Year : {{form.publication_year}}
+<br>Pages : {{form.pages}}
+<br>Location : {{form.location}}
+<br>State : {{form.state}}
+<br>Publisher : {{form.publisher}}
+<br>First Author Details:
+<br>Title : {{form.title_first}}
+<br>First Name : {{form.first_author_fname}}
+<br>Last Name : {{form.first_author_lname}}
+<br>Upload File : {{form.file}}
+
+<br><u onclick = "fdisplayFunction()">Add Second Author</u>
+<p id="fDiv">Enter Second Author Detail:
+<br>Title : {{form.title_second}}
+First Name :  {{form.second_author_fname}}<br>
+Last Name : {{form.second_author_lname}}
+<br> <u onclick = "sdisplayFunction()">Add Third Author</u> </p>
+
+<p id="sDiv"> Enter Third Author Detail:
+<br>Title : {{form.title_third}}
+First Name :  {{form.third_author_fname}}<br>
+Last Name : {{form.third_author_lname}}
+<br> <u>You cannot add more than 3 authors</u> </p>
+
+<p><input type = "submit" name = "submit" value="Submit" /></p>
+</form>
+
+</body>
+</html>

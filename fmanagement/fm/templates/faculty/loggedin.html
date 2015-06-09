@@ -1,0 +1,49 @@
+<html>
+<head> <style>
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:200px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+</style>
+
+ </head>
+<body>  
+<div id="header">
+<h1>Publications : {{fullname}}</h1>
+</div>
+<div id="nav">
+Click here to view your <a href = "/faculty/profile">Profile</a></br>
+Click here to <a href = "/faculty/changepassword"> change password </a>
+</div>
+<div id="section">
+<br>Hello! {{fullname}} You're currently logged in!<br>{% csrf_token %}
+</div>
+
+
+<div id="footer">
+Click here to <a href = "/faculty/logout/">Logout</a></br>
+</div>
+</body>
+</html>

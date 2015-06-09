@@ -1,0 +1,72 @@
+
+<html>
+<head> <style>
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:200px;
+    float:left;
+    padding:5px;          
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;        
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;      
+}
+</style>
+
+ </head>
+<body>  
+<div id="header">
+<h1>Publications : {{fullname}}</h1>
+</div>
+<div id="nav">
+Click here to <a href = "/pfaculty/changepassword"> change password </a>
+</div>
+<div id="section">
+<br>Hello! {{fullname}} You're currently logged in!<br>{% csrf_token %}
+<br> Full Name: {{form.full_name}}                                       
+<br> Designation: {{form.designation}} 
+<br>
+{% if form.picture %}           
+<p><img src="{{form.picture.url}}" width="100" ></img>
+</p>       
+{% endif %}      
+ 
+   
+<p><a href ="/pfaculty/pedit/">edit</a></p>
+
+<p><a href ="/pfaculty/myuploads/"> My Uploads</a>
+</p>
+<br><h2>Upload Research Work:</h2>
+
+
+<h3>
+<p><a href= "/pfaculty/book/"> Book </a></p>
+<p><a href= "/tlogin/bookchapter/">Book Chapter</a></p>
+<p><a href= "/tlogin/rpaper/">Research Paper in Journal</a></p>
+<p><a href= "/tlogin/cpaper/">Conference Paper</a></p>
+<p><a href= "/tlogin/profile/">Profile Page</a></p>
+</h3>
+</div> 
+
+
+<div id="footer">
+Click here to <a href = "/pfaculty/logout/">Logout</a></br>
+</div>
+</body>
+</html>
